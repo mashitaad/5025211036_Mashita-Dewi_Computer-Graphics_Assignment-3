@@ -113,3 +113,47 @@ Menggambar segitiga kedua menggunakan data koordinat dan warna yang telah disiap
 
 <img width="424" alt="Persegi" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/0ee0af0e-119e-46c8-ae02-bbc21d8a741a">
 
+## Soal 2
+> Diberikan file contoh1.html yang merupakan gambar kubus yang dibuat dengan WebGL dan glMatrix, coba ubahlah kubus 2D tersebut menjadi 3D!.
+
+### Solusi Soal 2
+
+```ruby
+function draw() { 
+    gl.clearColor(0,0,0,1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
+    /* Draw the six faces of a cube, with different colors. */
+    
+    drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+    drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+    drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);
+    drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+    drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);
+    drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+}
+```
+1. Inisialisasi dan Pengaturan Awal
+```ruby	
+gl.clearColor(0,0,0,1);
+gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+```
+Mengatur warna latar belakang canvas dan membersihkan buffer warna dan buffer 	kedalaman.
+
+2. Menggambar Enam Wajah Kubus dengan Warna Berbeda
+```ruby
+drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);  
+drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);  
+drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+```
+- Setiap baris memanggil fungsi drawPrimitive untuk menggambar satu wajah kubus.
+- Argumen pertama (gl.TRIANGLE_FAN) adalah mode penggambaran yang digunakan.
+- Argumen kedua adalah array RGBA yang menentukan warna wajah kubus.
+- Argumen ketiga adalah array koordinat vertex untuk membentuk wajah kubus tersebut.	
+- Warna yang digunakan diubah dari nilai heksadesimal ke nilai 	desimal antara 0 dan 1 agar sesuai dengan format yang diterima oleh WebGL.
+
+<img width="424" alt="Kubus" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/abf05aa3-10a4-4a7c-8610-f4816cac595b">
+
