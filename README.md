@@ -157,3 +157,129 @@ drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5
 
 <img width="424" alt="Kubus" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/abf05aa3-10a4-4a7c-8610-f4816cac595b">
 
+### Memperlihatkan Segala Sisi Kubus
+1. Sisi Depan
+```ruby
+function draw() { 
+    gl.clearColor(0,0,0,1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
+    /* Draw the six faces of a cube, with different colors. */
+    
+    drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+
+}
+```
+Saat ini, hanya sisi depan yang diaktifkan untuk digambar `drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);`. Anda dapat mengaktifkan sisi lainnya (menghilangkan komentar pada panggilan drawPrimitive yang lain) untuk menggambar keseluruhan kubus dengan warna-warna yang berbeda pada setiap sisinya.
+
+<img width="432" alt="Kubus Sisi Depan" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/360affee-8cf3-4e82-9aa0-f0a93c80ae94">
+
+2. Sisi Belakang
+```ruby
+function draw() { 
+    gl.clearColor(0,0,0,1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
+    /* Draw the six faces of a cube, with different colors. */
+    
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+	drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+
+}
+```
+Saat ini, hanya sisi belakang yang diaktifkan untuk digambar `drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]);`. Anda dapat mengaktifkan sisi lainnya (menghilangkan komentar pada panggilan drawPrimitive yang lain) untuk menggambar keseluruhan kubus dengan warna-warna yang berbeda pada setiap sisinya.
+
+<img width="430" alt="Kubus Sisi Belakang" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/c10ccebd-8a21-43d6-8eca-0c3c79279bfd">
+
+3. Sisi Atas
+```ruby
+function draw() { 
+    gl.clearColor(0,0,0,1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
+    /* Draw the six faces of a cube, with different colors. */
+    
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+	drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+
+}
+```
+Saat ini, hanya sisi atas yang diaktifkan untuk digambar `drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);`. Anda dapat mengaktifkan sisi lainnya (menghilangkan komentar pada panggilan drawPrimitive yang lain) untuk menggambar keseluruhan kubus dengan warna-warna yang berbeda pada setiap sisinya.
+
+<img width="437" alt="Kubus Sisi Atas" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/edef307c-c7ac-487d-8c19-4f43bf0de594">
+
+4. Sisi Bawah
+```ruby
+function draw() { 
+    gl.clearColor(0,0,0,1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
+    /* Draw the six faces of a cube, with different colors. */
+    
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);
+    	drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+
+}
+```
+Saat ini, hanya sisi bawah yang diaktifkan untuk digambar `drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);`. Anda dapat mengaktifkan sisi lainnya (menghilangkan komentar pada panggilan drawPrimitive yang lain) untuk menggambar keseluruhan kubus dengan warna-warna yang berbeda pada setiap sisinya.
+
+<img width="439" alt="Kubus Sisi Bawah" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/6673c836-db6f-4a72-a832-bbd5b0681594">
+
+5. Sisi Kanan
+```ruby
+function draw() { 
+    gl.clearColor(0,0,0,1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
+    /* Draw the six faces of a cube, with different colors. */
+    
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+    	drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+
+}
+```
+Saat ini, hanya sisi kanan yang diaktifkan untuk digambar `drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);`. Anda dapat mengaktifkan sisi lainnya (menghilangkan komentar pada panggilan drawPrimitive yang lain) untuk menggambar keseluruhan kubus dengan warna-warna yang berbeda pada setiap sisinya.
+
+<img width="431" alt="Kubus Sisi Kanan" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/5eab2448-816a-4131-b518-896314fd8e93">
+
+6. Sisi Kiri
+```ruby
+function draw() { 
+    gl.clearColor(0,0,0,1);
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    
+    /* Draw the six faces of a cube, with different colors. */
+    
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.133, 0.611, 0.565, 1], [-0.5, -0.4, -0.5, -0.5, 0.4, -0.5, 0.3, 0.4, -0.5, 0.3, -0.4, -0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.913, 0.721, 0.141, 1], [-0.3, -0.2, 0.5, 0.5, -0.2, 0.5, 0.5, 0.6, 0.5, -0.3, 0.6, 0.5]); 
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.917, 0.722, 0.133, 1], [-0.3, 0.6, -0.5, -0.5, 0.4, 0.5, 0.3, 0.4, 0.5, 0.5, 0.6, -0.5]);
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.133, 1], [-0.3, -0.2, -0.5, 0.5, -0.2, -0.5, 0.3, -0.4, 0.5, -0.5, -0.4, 0.5]);  
+    // drawPrimitive(gl.TRIANGLE_FAN, [0.929, 0.576, 0.133, 1], [0.5, -0.2, -0.5, 0.5, 0.6, -0.5, 0.3, 0.4, 0.5, 0.3, -0.4, 0.5]);
+    	drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);  
+
+}
+```
+Saat ini, hanya sisi kiri yang diaktifkan untuk digambar `drawPrimitive(gl.TRIANGLE_FAN, [0.596, 0.498, 0.596, 1], [-0.3, -0.2, -0.5, -0.5, -0.4, 0.5, -0.5, 0.4, 0.5, -0.3, 0.6, -0.5]);`
+
+<img width="441" alt="Kubus Sisi Kiri" src="https://github.com/mashitaad/5025211036_Mashita-Dewi_Computer-Graphics_Assignment-3/assets/87978863/d2abfc20-7166-47d9-91a9-1b587262f12b">
